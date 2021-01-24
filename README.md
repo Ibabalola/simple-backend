@@ -10,4 +10,4 @@ Simple node and express docker
 `docker stop <container id>`                    : stop running container
 `docker start <container id>`                   : start running container
 `docker pull <name>`                            : pull an image
-`docker push <name>`                            : push an image   
+`docker push <name>`                            : push an image
