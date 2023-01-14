@@ -22,6 +22,6 @@ router.get('/', (req, res) => {
     res.json("I love docker!");
 });
 
-app.use('/.netlify/functions/api', router);
+app.use('/', router);
 
 module.exports.handler = serverless(app);
