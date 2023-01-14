@@ -4,6 +4,7 @@ import config from './api';
 
 const app = express();
 const router = express.Router();
+const serverless = require('serverless-http');
 
 const PORT = 4000;
 const client = mongodb.MongoClient;
@@ -21,8 +22,6 @@ router.get('/', (req, res) => {
     res.json("I love docker!");
 });
 
-app.use('/', router);
+app.use('/.netlify/functions/api', router);
 
-app.listen(PORT, () => {
-    console.log('Your server is running on PORT:',PORT);
-});
+module.exports.handler = serverless(app);
