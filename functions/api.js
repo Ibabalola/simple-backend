@@ -1,10 +1,10 @@
 import express from 'express';
 import mongodb from 'mongodb';
 import config from './api';
+import serverless from 'serverless-http';
 
 const app = express();
 const router = express.Router();
-const serverless = require('serverless-http');
 
 const PORT = 4000;
 const client = mongodb.MongoClient;
