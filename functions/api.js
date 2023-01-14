@@ -22,6 +22,13 @@ router.get('/', (req, res) => {
     res.json("I love docker!");
 });
 
+router.get('/json', (req, res) => {
+    res.json({
+        firstName: "Isaac",
+        lastName: "Babalola"
+    });
+});
+
 app.use('/', router);
 
 module.exports.handler = serverless(app);
