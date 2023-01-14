@@ -1,6 +1,6 @@
 import express from 'express';
 import mongodb from 'mongodb';
-import config from './';
+import config from './api';
 
 const app = express();
 const router = express.Router();
